@@ -97,7 +97,7 @@ async function loadBottlenecks() {
         </div>
       </article>`).join("");
   } catch (error) {
-    container.innerHTML = `<article class="panel loading-cell">Unable to load bottlenecks: ${error.message}</article>`;
+    container.innerHTML = `<article class="panel loading-cell">Unable to load bottlenecks: ${escapeHtml(error.message)}</article>`;
   }
 }
 

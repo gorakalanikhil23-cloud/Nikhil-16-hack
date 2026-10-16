@@ -14,8 +14,10 @@ MODEL = "gemma2:2b"
 OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434").rstrip("/")
 _EXPLANATION_CACHE: dict[str, dict[str, Any]] = {}
 _MEDICAL_TERMS = re.compile(
-    r"\b(diagnos(?:e|is|ing)|symptom|treatment|medication|prescription|"
-    r"disease|patient|clinical|prognosis|dosage|therapy)\b",
+    r"\b(diagnos(?:e|is|ing)|symptom|treatment|medication|medicine|prescription|"
+    r"disease|patient|clinical|prognosis|dosage|therapy|medical|health|illness|"
+    r"diabetes|cancer|infection|injury|pain|fever|allergy|surgery|vaccine)\b|"
+    r"\bblood pressure\b",
     re.IGNORECASE,
 )
 
