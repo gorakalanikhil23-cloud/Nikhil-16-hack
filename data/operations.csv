@@ -1,0 +1,65 @@
+date,department,appointments,staff_available,avg_task_minutes,emergency_cases
+2026-10-09,Radiology,24,3,12,2
+2026-10-09,Emergency,23,4,14,1
+2026-10-09,Laboratory,47,3,18,0
+2026-10-09,Cardiology,12,3,15,0
+2026-10-09,Pharmacy,44,3,20,1
+2026-10-09,Orthopedics,23,6,15,1
+2026-10-09,Pediatrics,23,5,12,1
+2026-10-09,General OPD,45,5,16,1
+2026-10-10,Radiology,17,5,13,0
+2026-10-10,Emergency,26,3,17,5
+2026-10-10,Laboratory,38,3,19,4
+2026-10-10,Cardiology,13,6,13,2
+2026-10-10,Pharmacy,37,5,15,0
+2026-10-10,Orthopedics,12,4,16,0
+2026-10-10,Pediatrics,17,3,18,2
+2026-10-10,General OPD,46,5,14,2
+2026-10-11,Radiology,19,4,16,0
+2026-10-11,Emergency,29,4,20,3
+2026-10-11,Laboratory,35,6,18,2
+2026-10-11,Cardiology,22,4,17,0
+2026-10-11,Pharmacy,35,3,17,3
+2026-10-11,Orthopedics,16,3,15,2
+2026-10-11,Pediatrics,25,5,15,3
+2026-10-11,General OPD,44,6,14,2
+2026-10-12,Radiology,16,4,20,2
+2026-10-12,Emergency,31,6,18,5
+2026-10-12,Laboratory,37,4,20,3
+2026-10-12,Cardiology,13,3,13,0
+2026-10-12,Pharmacy,33,6,13,3
+2026-10-12,Orthopedics,18,6,20,1
+2026-10-12,Pediatrics,22,3,13,2
+2026-10-12,General OPD,52,5,13,2
+2026-10-13,Radiology,20,4,19,0
+2026-10-13,Emergency,31,5,20,2
+2026-10-13,Laboratory,46,3,16,5
+2026-10-13,Cardiology,20,4,14,1
+2026-10-13,Pharmacy,33,3,17,3
+2026-10-13,Orthopedics,12,3,17,1
+2026-10-13,Pediatrics,17,3,15,0
+2026-10-13,General OPD,34,6,13,4
+2026-10-14,Radiology,16,4,19,1
+2026-10-14,Emergency,24,6,15,8
+2026-10-14,Laboratory,36,5,18,5
+2026-10-14,Cardiology,22,5,19,2
+2026-10-14,Pharmacy,42,3,15,1
+2026-10-14,Orthopedics,13,5,12,2
+2026-10-14,Pediatrics,22,4,15,0
+2026-10-14,General OPD,34,3,15,0
+2026-10-15,Radiology,14,5,13,1
+2026-10-15,Emergency,24,6,15,8
+2026-10-15,Laboratory,34,6,15,3
+2026-10-15,Cardiology,18,4,13,0
+2026-10-15,Pharmacy,41,5,18,3
+2026-10-15,Orthopedics,19,3,13,0
+2026-10-15,Pediatrics,20,5,13,1
+2026-10-15,General OPD,38,4,20,3
+2026-10-16,Radiology,42,1,25,4
+2026-10-16,Emergency,39,3,19,11
+2026-10-16,Laboratory,34,6,14,2
+2026-10-16,Cardiology,19,4,13,1
+2026-10-16,Pharmacy,45,3,12,4
+2026-10-16,Orthopedics,12,3,15,0
+2026-10-16,Pediatrics,20,6,19,1
+2026-10-16,General OPD,58,4,18,4

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>CareOps | Hospital Operations</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="CareOps home"><span class="brand-mark">+</span><span>CareOps <small>OPERATIONS</small></span></a>
+    <nav aria-label="Main navigation">
+      <button class="nav-link active" data-view="dashboard">Dashboard</button>
+      <button class="nav-link" data-view="bottlenecks">AI Bottleneck Detector</button>
+      <button class="nav-link" data-view="forecast">Tomorrow's Forecast</button>
+      <button class="nav-link" data-view="ask">Ask the Data</button>
+    </nav>
+    <span class="status-pill" id="mode-banner" role="status">Checking system mode…</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">OPERATIONS INTELLIGENCE</p>
+        <h1>See the pressure points.<br><span>Plan the next move.</span></h1>
+        <p class="hero-copy">A clear view of capacity, workload, and what's coming next.</p>
+      </div>
+      <div class="date-box"><span class="pulse"></span><div><strong id="today-label">Today's operations</strong><small>Synthetic operational data</small></div></div>
+    </section>
+
+    <section id="view-dashboard" class="view active" aria-labelledby="dashboard-title">
+      <div class="section-heading"><div><p class="eyebrow">AT A GLANCE</p><h2 id="dashboard-title">Today's dashboard</h2></div><p class="muted">Workload and staffing across 8 departments</p></div>
+      <div class="metrics-grid" id="metric-cards">
+        <article class="metric-card normal"><span class="metric-label">Normal</span><strong class="metric-value">—</strong><span class="metric-note">Within expected capacity</span></article>
+        <article class="metric-card warning"><span class="metric-label">Warning</span><strong class="metric-value">—</strong><span class="metric-note">Approaching capacity</span></article>
+        <article class="metric-card critical"><span class="metric-label">Critical</span><strong class="metric-value">—</strong><span class="metric-note">Demand exceeds capacity</span></article>
+      </div>
+      <article class="panel table-panel">
+        <div class="panel-heading"><div><h3>Department overview</h3><p>Demand compared with available shift capacity</p></div><span class="panel-tag">TODAY</span></div>
+        <div class="table-wrap"><table><thead><tr><th>Department</th><th>Appointments</th><th>Staff</th><th>Emergency cases</th><th>Utilization</th><th>Risk</th></tr></thead><tbody id="department-rows"><tr><td colspan="6" class="loading-cell">Loading department metrics…</td></tr></tbody></table></div>
+      </article>
+    </section>
+
+    <section id="view-bottlenecks" class="view" aria-labelledby="bottlenecks-title">
+      <div class="section-heading"><div><p class="eyebrow">AI BOTTLENECK DETECTOR</p><h2 id="bottlenecks-title">Where attention is needed</h2></div><p class="muted">Evidence-led operational explanations and actions</p></div>
+      <div class="callout"><span class="callout-icon">i</span><span>Recommendations support operational planning only. Verify actions with your local team.</span></div>
+      <div id="bottleneck-list" class="bottleneck-list"><div class="panel loading-cell">Finding operational bottlenecks…</div></div>
+    </section>
+
+    <section id="view-forecast" class="view" aria-labelledby="forecast-title">
+      <div class="section-heading"><div><p class="eyebrow">LOOKING AHEAD</p><h2 id="forecast-title">Tomorrow's forecast</h2></div><p class="muted">Based on the average of the last 7 days</p></div>
+      <article class="panel forecast-panel">
+        <div class="panel-heading"><div><h3>Forecast utilization</h3><p>Estimated demand as a share of available shift capacity</p></div><span class="panel-tag">NEXT SHIFT</span></div>
+        <div class="chart-axis"><span>Department</span><div class="axis-scale"><span>0%</span><span>50%</span><span class="threshold-label">100% capacity</span><span>150%</span></div></div>
+        <div id="forecast-chart" class="forecast-chart"><p class="loading-cell">Calculating forecast…</p></div>
+        <div class="chart-legend"><span class="legend-normal"></span> Normal <span class="legend-warning"></span> Warning <span class="legend-critical"></span> Critical <span class="legend-line"></span> Capacity threshold</div>
+      </article>
+    </section>
+
+    <section id="view-ask" class="view" aria-labelledby="ask-title">
+      <div class="section-heading"><div><p class="eyebrow">YOUR OPERATIONS COPILOT</p><h2 id="ask-title">Ask the data</h2></div><p class="muted">Answers use synthetic operational metrics only</p></div>
+      <article class="panel ask-panel">
+        <div class="ask-intro"><div class="ask-icon">?</div><div><h3>What would you like to know?</h3><p>Ask a question about workload, staffing, or the forecast.</p></div></div>
+        <form id="ask-form"><label class="sr-only" for="question-input">Your question</label><textarea id="question-input" maxlength="300" placeholder="e.g. Which department is most overloaded?" required></textarea><div class="ask-submit"><span id="char-count">0 / 300</span><button class="primary-button" type="submit">Ask question <span>→</span></button></div></form>
+        <div class="examples"><span>TRY ASKING</span><button type="button" class="example-question">Which department is most overloaded?</button><button type="button" class="example-question">What is the forecast tomorrow?</button><button type="button" class="example-question">How is Radiology doing?</button></div>
+        <div id="answer-box" class="answer-box" aria-live="polite" hidden></div>
+      </article>
+    </section>
+  </main>
+  <footer><span><span class="footer-mark">+</span> CareOps <span class="footer-separator">/</span> Operational visibility for better decisions</span><span>Operational data only. Not for clinical decisions.</span></footer>
+  <script src="/app.js" defer></script>
+</body>
+</html>
